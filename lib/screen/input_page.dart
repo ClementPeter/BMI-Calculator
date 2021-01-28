@@ -9,7 +9,7 @@ import '../component/Rounded_IconButton.dart';
 import '../component/bottom_container.dart';
 import 'package:bmi_calculator/calculator_brian.dart';
 
-//Enumerator are kinda of like Classes use Upper Camel case
+//Enumerator are kinda of like Classes they also use Camel case
 enum Gender {
   male,
   female,
@@ -23,7 +23,7 @@ class InputPage extends StatefulWidget {
 }
 
 class _InputPageState extends State<InputPage> {
-  Gender selectedGender;
+  Gender selectedGender; //A new enum Object
   int height = 150;
   int weight = 30;
   int age = 20;
@@ -114,16 +114,18 @@ class _InputPageState extends State<InputPage> {
                       thumbShape:
                           RoundSliderThumbShape(enabledThumbRadius: 15.0),
                     ),
+                    //.copyWith helps you to add other Custom Changes to the Theming property
                     child: Slider(
                       value: height.toDouble(),
                       min: 100.0,
-                      max: 500.0,
+                      max: 600.0,
                       onChanged: (double newSliderValue) {
                         print(height);
                         setState(() {
                           height = newSliderValue.toInt();
                         });
                       },
+                      //activeColor: kInactiveCardColour,
                     ),
                   ),
                 ],
@@ -237,7 +239,7 @@ class _InputPageState extends State<InputPage> {
                       ],
                     ),
                   ),
-                ),
+                ), //age
               ],
             ),
           ),
@@ -246,7 +248,7 @@ class _InputPageState extends State<InputPage> {
             onpress: () {
               CalculatorBrain calc =
                   CalculatorBrain(weight: weight, height: height);
-              //
+
               // print(calc.getResult());
               // print(calc.calculateBMI());
               // print(calc.getFeedback());
@@ -262,7 +264,7 @@ class _InputPageState extends State<InputPage> {
                 ),
               );
             },
-          )
+          ) //bottom container
         ],
       ),
     );

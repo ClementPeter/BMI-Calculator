@@ -3,16 +3,15 @@ import 'package:flutter/material.dart';
 import '../component/reuseable_card.dart';
 import '../component/bottom_container.dart';
 
+//ResultPage collect the Calculations done by CalculatorBrain.dart
 class ResultPage extends StatelessWidget {
-  ResultPage({
-    this.resultText,
-    this.bmiResult,
-    this.feedback,
-  });
   //properties
   final String resultText;
   final String bmiResult;
   final String feedback;
+
+  ResultPage({this.resultText, this.bmiResult, this.feedback});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(

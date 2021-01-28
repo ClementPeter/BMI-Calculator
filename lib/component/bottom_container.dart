@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import '../constants.dart';
 
-//This is the Bottom Pink coloured containern at the base of our screens
+//This is the Bottom Pink coloured containern at the base of our screen
 class BottomContainer extends StatelessWidget {
   BottomContainer({@required this.title, @required this.onpress});
 
@@ -13,7 +13,7 @@ class BottomContainer extends StatelessWidget {
     return GestureDetector(
       onTap: onpress,
       child: Container(
-        padding: EdgeInsets.only(bottom: 30),
+        //padding: EdgeInsets.all(10),
         child: Center(
           child: Text(
             title,

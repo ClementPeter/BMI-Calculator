@@ -7,6 +7,7 @@ class IconContent extends StatelessWidget {
   //final Icon icons;
   final String gender;
   final IconData icon;
+
   //Our Constructor to enable us create other Custom instances
   IconContent({this.icon, this.gender});
 
